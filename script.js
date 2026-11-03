@@ -1,5 +1,5 @@
 const accessMessage =
-  "Hi Admin, I’d like to continue using Soodering. Could you please share the new website address with me?";
+  "Hi Admin, I’d like to continue using Soodering. Could you please approve my access and share the new private website address with me?";
 
 const copyButtons = [
   document.querySelector("#copy-request"),
