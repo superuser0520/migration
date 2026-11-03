@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soodering has moved to a new website. Contact the Admin to request the new address."
+    />
+    <meta name="theme-color" content="#08110f" />
+    <title>Soodering has moved</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true">
+      <div class="glow glow--one"></div>
+      <div class="glow glow--two"></div>
+      <div class="grid"></div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Soodering home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>Soodering</span>
+      </a>
+
+      <div class="status-pill">
+        <span class="status-dot" aria-hidden="true"></span>
+        Migration complete
+      </div>
+    </header>
+
+    <main>
+      <section class="notice" aria-labelledby="page-title">
+        <div class="eyebrow">
+          <span>Service notice</span>
+          <span aria-hidden="true">/</span>
+          <span>New destination</span>
+        </div>
+
+        <h1 id="page-title">We’ve moved<br />somewhere <em>new.</em></h1>
+
+        <p class="lead">
+          Soodering has migrated to a new website. The new address is shared
+          directly by the Admin and isn’t published on this page.
+        </p>
+
+        <div class="actions">
+          <button class="button button--primary" id="copy-request" type="button">
+            <span>Copy access request</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M7.5 5.5v-1A1.5 1.5 0 0 1 9 3h6.5A1.5 1.5 0 0 1 17 4.5V11a1.5 1.5 0 0 1-1.5 1.5h-1" />
+              <rect x="3" y="7.5" width="9.5" height="9.5" rx="1.5" />
+            </svg>
+          </button>
+          <button class="button button--text" id="how-to" type="button">
+            How do I get access?
+          </button>
+        </div>
+
+        <div class="request-preview" id="request-preview" aria-live="polite">
+          <div class="request-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6.5 12 12l8-5.5" />
+              <rect x="3" y="5" width="18" height="14" rx="2.5" />
+            </svg>
+          </div>
+          <div>
+            <span class="request-label">Ready to send</span>
+            <p>Hi Admin, I’d like to continue using Soodering. Could you please share the new website address with me?</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="route-card" aria-label="Migration status">
+        <div class="route-top">
+          <span class="route-label">Route update</span>
+          <span class="route-code">301</span>
+        </div>
+
+        <div class="route-visual" aria-hidden="true">
+          <div class="node node--old">
+            <span class="node-dot"></span>
+            <div>
+              <span>Previous site</span>
+              <strong>Offline</strong>
+            </div>
+          </div>
+
+          <div class="route-line">
+            <span></span>
+            <svg viewBox="0 0 18 18"><path d="m5 3 6 6-6 6" /></svg>
+          </div>
+
+          <div class="node node--new">
+            <span class="node-dot"></span>
+            <div>
+              <span>New website</span>
+              <strong>Access by request</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="route-footer">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <rect x="4" y="8" width="12" height="9" rx="2" />
+            <path d="M7 8V6a3 3 0 0 1 6 0v2" />
+          </svg>
+          <p>The new URL is provided privately to intended users.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Soodering</span>
+      <span class="footer-note">This page is the official migration notice.</span>
+    </footer>
+
+    <dialog id="access-dialog">
+      <form method="dialog" class="dialog-card">
+        <button class="dialog-close" value="close" aria-label="Close dialog">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" /></svg>
+        </button>
+        <span class="dialog-number">01</span>
+        <h2>Request the new address</h2>
+        <p>
+          Contact your Soodering Admin through your usual communication channel.
+          Ask them to share the new website address with you.
+        </p>
+        <button class="button button--primary dialog-action" id="copy-request-dialog" value="default">
+          Copy request message
+        </button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8" /></svg>
+      <span>Request copied to clipboard</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
